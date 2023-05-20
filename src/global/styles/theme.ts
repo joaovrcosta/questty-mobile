@@ -1,7 +1,8 @@
 export default {
   colors: {
-    primary: "#FDFFF4",
+    background: "#FDFFF4",
     white: "#FFFFFF",
+    black: "#000000",
     blue_300: "#82C3FF",
     blue_500: "#45A6FF",
     blue_950: "#10162F",
