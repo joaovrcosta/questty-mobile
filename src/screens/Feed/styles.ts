@@ -10,8 +10,8 @@ export const Container = styled.View`
 
 export const Header = styled.View`
   width: 100%;
-  height: ${RFPercentage(42)}px;
-  background-color: ${({ theme }) => theme.colors.yellow_400};
+  height: ${RFPercentage(16)}px;
+  background-color: ${({ theme }) => theme.colors.background};
 
   justify-content: center;
   align-items: flex-start;
@@ -79,3 +79,10 @@ export const InputBox = styled.View`
   align-items: center;
   flex-direction: row;
 `;
+
+export const Questions = styled.View`
+  flex: 1;
+  padding: 20px 16px;
+`;
+
+export const QuestionsList = styled.FlatList``;
