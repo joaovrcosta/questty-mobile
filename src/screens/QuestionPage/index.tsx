@@ -1,4 +1,3 @@
-import { Username } from "../../components/QuestionCard/styles";
 import {
   Container,
   QuestionInfo,
