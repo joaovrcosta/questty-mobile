@@ -11,6 +11,7 @@ import {
   SignUpButtonText,
   ForgetText,
   ForgetBox,
+  LabelContainer,
 } from "./styles";
 import logoQuestty from "../../assets/questty-logo-large.png";
 
@@ -22,7 +23,9 @@ export function Login() {
           <LogoImage source={logoQuestty} />
         </LogoImageContainer>
         <LoginForm>
-          <Label>Entrar com a sua conta</Label>
+          <LabelContainer>
+            <Label>Entrar com a sua conta</Label>
+          </LabelContainer>
           <Input placeholder="Digite seu e-mail" />
           <Input placeholder="Digite aqui sua senha" />
           <ForgetBox>

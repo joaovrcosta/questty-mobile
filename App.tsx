@@ -11,6 +11,7 @@ import {
 import { HeaderComponent } from "./src/components/Header";
 import { QuestionPage } from "./src/screens/QuestionPage";
 import { Login } from "./src/screens/Login";
+import { Register } from "./src/screens/Register";
 
 export default function App() {
   const [hasLoadedFonts] = useFonts({
@@ -26,7 +27,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <HeaderComponent />
-      <Login />
+      <Register />
     </ThemeProvider>
   );
 }

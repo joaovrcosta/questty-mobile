@@ -18,12 +18,18 @@ export const LogoImage = styled.Image``;
 
 export const LoginForm = styled.View``;
 
+export const LabelContainer = styled.View`
+  display: flex;
+  align-items: center;
+`;
+
 export const Label = styled.Text`
   display: flex;
   align-items: center;
   padding: 16px;
   font-size: ${RFValue(16)}px;
   font-weight: bold;
+  color: ${({ theme }) => theme.colors.blue_950};
 `;
 
 export const SignInButton = styled.TouchableOpacity`
@@ -40,6 +46,7 @@ export const SignInButton = styled.TouchableOpacity`
 export const SignInButtonText = styled.Text`
   font-size: ${RFValue(16)}px;
   font-weight: bold;
+  color: ${({ theme }) => theme.colors.white};
 `;
 
 export const SignUpButton = styled.TouchableOpacity`
@@ -54,6 +61,7 @@ export const SignUpButton = styled.TouchableOpacity`
 export const SignUpButtonText = styled.Text`
   font-size: ${RFValue(16)}px;
   font-weight: bold;
+  color: ${({ theme }) => theme.colors.blue_950};
 `;
 
 export const ForgetBox = styled.View`
