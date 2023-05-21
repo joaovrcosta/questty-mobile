@@ -1,4 +1,4 @@
-import { TextInputProps } from "react-native";
 import styled from "styled-components/native";
+import { TextInput } from "react-native";
 
-export const InputStyle = styled.TextInput``;
+export const Container = styled(TextInput)``;

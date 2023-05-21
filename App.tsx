@@ -1,10 +1,6 @@
-import * as SplashScreen from "expo-splash-screen";
 import { ThemeProvider } from "styled-components";
 import theme from "./src/global/styles/theme";
-import { useEffect } from "react";
 // import QuesttyLogo from "./src/assets/questty-logo-for-mobile.svg";
-
-import { Dashboard } from "./src/screens/Feed";
 
 import {
   useFonts,
@@ -14,6 +10,7 @@ import {
 } from "@expo-google-fonts/poppins";
 import { HeaderComponent } from "./src/components/Header";
 import { QuestionPage } from "./src/screens/QuestionPage";
+import { Login } from "./src/screens/Login";
 
 export default function App() {
   const [hasLoadedFonts] = useFonts({
@@ -29,7 +26,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <HeaderComponent />
-      <QuestionPage />
+      <Login />
     </ThemeProvider>
   );
 }
