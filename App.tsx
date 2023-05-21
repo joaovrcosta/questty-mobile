@@ -12,6 +12,8 @@ import {
   Poppins_500Medium,
   Poppins_700Bold,
 } from "@expo-google-fonts/poppins";
+import { HeaderComponent } from "./src/components/Header";
+import { QuestionPage } from "./src/screens/QuestionPage";
 
 export default function App() {
   const [hasLoadedFonts] = useFonts({
@@ -26,7 +28,8 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Dashboard />
+      <HeaderComponent />
+      <QuestionPage />
     </ThemeProvider>
   );
 }

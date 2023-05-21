@@ -1,10 +1,9 @@
-import styled from "styled-components/native";
-
 import { getStatusBarHeight } from "react-native-iphone-x-helper";
 import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
+import styled from "styled-components/native";
 import { EvilIcons } from "@expo/vector-icons";
 
-export const Header = styled.View`
+export const HeaderBox = styled.View`
   width: 100%;
   height: ${RFPercentage(16)}px;
   background-color: ${({ theme }) => theme.colors.background};
@@ -75,15 +74,3 @@ export const InputBox = styled.View`
   align-items: center;
   flex-direction: row;
 `;
-
-export const Container = styled.View`
-  flex: 1;
-  background-color: ${({ theme }) => theme.colors.background};
-`;
-
-export const Questions = styled.View`
-  flex: 1;
-  padding: 20px 16px;
-`;
-
-export const QuestionsList = styled.FlatList``;

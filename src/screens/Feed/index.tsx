@@ -1,25 +1,9 @@
-import {
-  Container,
-  HeaderWrapper,
-  Header,
-  Avatar,
-  AvatarContainer,
-  TextTest,
-  UserBox,
-  IconBell,
-  QuesttyLogo,
-  ImageBox,
-  InputBox,
-  Questions,
-  QuestionsList,
-} from "./styles";
+import { Container, Questions, QuestionsList } from "./styles";
 
 import { getBottomSpace } from "react-native-iphone-x-helper";
 
-import { Text } from "react-native";
-
-import Logo from "../../assets/questty-logo.png";
 import { QuestionCard } from "../../components/QuestionCard";
+import { SelectCategory } from "../../components/SelectCategory";
 
 export function Dashboard() {
   const data = [
@@ -52,26 +36,7 @@ export function Dashboard() {
   return (
     <>
       <Container>
-        <Header>
-          <HeaderWrapper>
-            <ImageBox>
-              <QuesttyLogo source={Logo} />
-            </ImageBox>
-            <InputBox>
-              <TextTest>SearchInput</TextTest>
-            </InputBox>
-            <UserBox>
-              <IconBell name="bell" />
-              <AvatarContainer>
-                <Avatar
-                  source={{
-                    uri: "https://avatars.githubusercontent.com/u/70654718?v=4",
-                  }}
-                />
-              </AvatarContainer>
-            </UserBox>
-          </HeaderWrapper>
-        </Header>
+        <SelectCategory name="Matérias"></SelectCategory>
 
         <Questions>
           <QuestionsList

@@ -35,7 +35,7 @@ export const UserAvatar = styled.Image`
 export const Username = styled.Text`
   margin-left: 8px;
   padding: 4px;
-  border-radius: 8px;
+  border-radius: 4px;
   border: 1px solid ${({ theme }) => theme.colors.black};
 `;
 
