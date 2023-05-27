@@ -22,3 +22,41 @@ font-weight: thin;
 font-size: ${RFValue(15)}px;
 line-height: 25px;
 text-align: justify;`;
+
+export const ResultInfo = styled.View`
+padding: 10px 10px 0px 12px;
+margin-top: 16px;
+background-color: ${({ theme }) => theme.colors.yellow_400};
+borderWidth: 1px;
+borderColor: black;
+
+`;
+
+export const ResultTopicContainer = styled.View`
+padding: 0px 4px;
+background-color: ${({ theme }) => theme.colors.white};
+borderWidth: 1px;         
+borderColor: ${({ theme }) => theme.colors.black};;
+borderRadius: 8px;
+text-align: center;
+width: 100px;
+height: 30px;
+`;
+
+export const ResultTopic = styled.Text`
+`;
+
+export const ResultTitle = styled.Text`
+`;
+
+export const ResultContentContainer = styled.View`
+padding: 0px 4px;
+background-color: ${({ theme }) => theme.colors.white};
+borderWidth: 1px;         
+borderColor: ${({ theme }) => theme.colors.black};;
+
+`;
+
+export const ResultContent = styled.Text`
+`;
+
