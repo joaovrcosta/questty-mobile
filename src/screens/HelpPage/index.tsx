@@ -9,13 +9,38 @@ import {
     ResultContent,
     ResultTopicContainer,
     ResultContentContainer,
-    SubContainer
+    SubContainer,
+    SelectContainer,
+    SelectText
 } from './styles';
 import { Pressable } from 'react-native'
 import { useState } from 'react';
-
+import { BottomSheet, Button, ListItem } from '@rneui/themed';
 export function HelpPage() {
     const [pressableActive, setPressableActive] = useState(false);
+    const [topic, setTopic] = useState("Minha Conta")
+    const [isVisible, setIsVisible] = useState(false);
+    const list = [
+        {
+            title: 'Minha Conta', onPress: () => {
+                setTopic("Minha Conta")
+                setIsVisible(false)
+            }
+        },
+        {
+            title: 'Perguntas', onPress: () => {
+                setTopic("Perguntas")
+                setIsVisible(false)
+            }
+        },
+        {
+            title: 'Cancel',
+            containerStyle: { backgroundColor: 'red' },
+            titleStyle: { color: 'white' },
+            onPress: () => setIsVisible(false),
+        },
+    ];
+
     let textLog = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt varius varius.";
     return (
         <>
@@ -27,6 +52,28 @@ export function HelpPage() {
                 </HelpInfo>
             </Container>
             <SubContainer>
+                <SelectContainer>
+                <Button
+                    title="Categorias"
+                    onPress={() => setIsVisible(true)}
+
+                />
+                <BottomSheet modalProps={{}} isVisible={isVisible}>
+                    {list.map((l, i) => (
+                        <ListItem
+                            key={i}
+                            containerStyle={l.containerStyle}
+                            onPress={l.onPress}
+                        >
+                            <ListItem.Content>
+                                <ListItem.Title style={l.titleStyle}>{l.title}</ListItem.Title>
+                            </ListItem.Content>
+                        </ListItem>
+                    ))}
+                </BottomSheet>
+                        <SelectText>{topic}</SelectText>
+                </SelectContainer>
+                
                 <Pressable
                     onPress={() => {
                         pressableActive ? setPressableActive(false) : setPressableActive(true)

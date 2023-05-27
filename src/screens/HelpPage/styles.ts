@@ -4,14 +4,15 @@ import styled from 'styled-components/native'
 export const Container = styled.View`
 flex: 1;
 background-color: ${({ theme }) => theme.colors.background};
-padding: 0px 16px 10px;
+padding: 0px 16px 20px;
 `;
 export const SubContainer = styled.View`
 background-color: ${({ theme }) => theme.colors.blue_100};
 flex: 4;
 borderWidth: 1px;
-padding: 0px 16px;
+padding: 15px 19px;
 `;
+
 
 export const HelpInfo = styled.View`
 margin-top: 16px;
@@ -28,6 +29,17 @@ font-weight: thin;
 font-size: ${RFValue(15)}px;
 line-height: 25px;
 text-align: justify;`;
+
+export const SelectContainer = styled.View`
+flexDirection: row;
+justifyContent: space-between;
+`;
+
+export const SelectText = styled.Text`
+font-size: ${RFValue(15)}px;
+line-height: 25px;
+font-weight: bold;
+`;
 
 export const ResultInfo = styled.View`
 padding: 10px 10px 10px ;
