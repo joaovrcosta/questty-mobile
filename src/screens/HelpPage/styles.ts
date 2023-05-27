@@ -4,6 +4,12 @@ import styled from 'styled-components/native'
 export const Container = styled.View`
 flex: 1;
 background-color: ${({ theme }) => theme.colors.background};
+padding: 0px 16px 10px;
+`;
+export const SubContainer = styled.View`
+background-color: ${({ theme }) => theme.colors.blue_100};
+flex: 4;
+borderWidth: 1px;
 padding: 0px 16px;
 `;
 
@@ -24,7 +30,7 @@ line-height: 25px;
 text-align: justify;`;
 
 export const ResultInfo = styled.View`
-padding: 10px 10px 0px 12px;
+padding: 10px 10px 10px ;
 margin-top: 16px;
 background-color: ${({ theme }) => theme.colors.yellow_400};
 borderWidth: 1px;
@@ -38,25 +44,35 @@ background-color: ${({ theme }) => theme.colors.white};
 borderWidth: 1px;         
 borderColor: ${({ theme }) => theme.colors.black};;
 borderRadius: 8px;
-text-align: center;
 width: 100px;
 height: 30px;
 `;
 
 export const ResultTopic = styled.Text`
+font-weight: thin;
+font-size: ${RFValue(10)}px;
+line-height: 25px;
+text-align: center;
 `;
 
 export const ResultTitle = styled.Text`
+font-weight: thin;
+font-size: ${RFValue(15)}px;
+line-height: 25px;
+text-align: center;
 `;
 
 export const ResultContentContainer = styled.View`
-padding: 0px 4px;
+padding: 10px 4px;
 background-color: ${({ theme }) => theme.colors.white};
 borderWidth: 1px;         
-borderColor: ${({ theme }) => theme.colors.black};;
+borderColor: ${({ theme }) => theme.colors.black};
 
 `;
 
 export const ResultContent = styled.Text`
-`;
+font-weight: thin;
+font-size: ${RFValue(15)}px;
+line-height: 25px;
+text-align: justify;`;
 
