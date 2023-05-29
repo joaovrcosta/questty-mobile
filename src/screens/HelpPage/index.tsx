@@ -7,10 +7,10 @@ import {
     ResultTopic,
     ResultTitle,
     ResultContent,
-    ResultTopicContainer,
-    ResultContentContainer,
+    ResultTopicWrapper,
+    ResultContentWrapper,
     SubContainer,
-    SelectContainer,
+    SelectWrapper,
     SelectText
 } from './styles';
 import { Pressable } from 'react-native'
@@ -52,7 +52,7 @@ export function HelpPage() {
                 </HelpInfo>
             </Container>
             <SubContainer>
-                <SelectContainer>
+                <SelectWrapper>
                 <Button
                     title="Categorias"
                     onPress={() => setIsVisible(true)}
@@ -72,23 +72,23 @@ export function HelpPage() {
                     ))}
                 </BottomSheet>
                         <SelectText>{topic}</SelectText>
-                </SelectContainer>
+                </SelectWrapper>
                 
                 <Pressable
                     onPress={() => {
                         pressableActive ? setPressableActive(false) : setPressableActive(true)
                     }}>
                     <ResultInfo>
-                        <ResultTopicContainer>
+                        <ResultTopicWrapper>
                             <ResultTopic>Minha conta</ResultTopic>
-                        </ResultTopicContainer>
+                        </ResultTopicWrapper>
 
                         <ResultTitle>Como faço para personalizar o meu feed?</ResultTitle>
 
                         {pressableActive && (
-                            <ResultContentContainer>
+                            <ResultContentWrapper>
                                 <ResultContent testID="pressable_press_console">{textLog}</ResultContent>
-                            </ResultContentContainer>
+                            </ResultContentWrapper>
                         )}
 
                     </ResultInfo>

@@ -30,7 +30,7 @@ font-size: ${RFValue(15)}px;
 line-height: 25px;
 text-align: justify;`;
 
-export const SelectContainer = styled.View`
+export const SelectWrapper = styled.View`
 flexDirection: row;
 justifyContent: space-between;
 `;
@@ -50,7 +50,7 @@ borderColor: black;
 
 `;
 
-export const ResultTopicContainer = styled.View`
+export const ResultTopicWrapper = styled.View`
 padding: 0px 4px;
 background-color: ${({ theme }) => theme.colors.white};
 borderWidth: 1px;         
@@ -74,7 +74,7 @@ line-height: 25px;
 text-align: center;
 `;
 
-export const ResultContentContainer = styled.View`
+export const ResultContentWrapper = styled.View`
 padding: 10px 4px;
 background-color: ${({ theme }) => theme.colors.white};
 borderWidth: 1px;         
