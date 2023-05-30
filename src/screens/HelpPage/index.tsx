@@ -33,7 +33,7 @@ export function HelpPage() {
             onPress: () => setIsVisible(false),
         },
     ];
-    const helpList= [
+    const helpList = [
         {
             topic: 'Minha Conta',
             question: 'Como faço para personalizar o meu feed?',
@@ -46,7 +46,12 @@ export function HelpPage() {
         },
         {
             topic: 'Minha Conta',
-            question: 'Como faço para trocar a foto de perfil',
+            question: 'Como faço para trocar a foto de perfil?',
+            answer: 'Fusce nibh massa, pulvinar sit amet nisl non, sagittis tempor urna. Aenean in sem tellus.',
+        },
+        {
+            topic: 'Perguntas',
+            question: 'Pergunta',
             answer: 'Fusce nibh massa, pulvinar sit amet nisl non, sagittis tempor urna. Aenean in sem tellus.',
         }
     ]
@@ -82,12 +87,15 @@ export function HelpPage() {
                     <SelectText>{topic}</SelectText>
                 </SelectWrapper>
 
-                {helpList.map((data)=>(
+                {helpList.map((data) => (
                     <>
-                    <PressableHelp
-                     textTopic={data.topic}
-                     textAnswer={data.answer}
-                     textQuestion={data.question}/>
+                        {data.topic == topic &&
+                            <PressableHelp
+                                key={data.question}
+                                textTopic={data.topic}
+                                textAnswer={data.answer}
+                                textQuestion={data.question} />
+                        }
                     </>
                 )
                 )}
