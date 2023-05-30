@@ -3,21 +3,14 @@ import {
     HelpInfo,
     HelpText,
     HelpSubText,
-    ResultInfo,
-    ResultTopic,
-    ResultTitle,
-    ResultContent,
-    ResultTopicWrapper,
-    ResultContentWrapper,
     SubContainer,
     SelectWrapper,
     SelectText
 } from './styles';
-import { Pressable } from 'react-native'
 import { useState } from 'react';
 import { BottomSheet, Button, ListItem } from '@rneui/themed';
+import { PressableHelp } from '../../components/PressableHelp';
 export function HelpPage() {
-    const [pressableActive, setPressableActive] = useState(false);
     const [topic, setTopic] = useState("Minha Conta")
     const [isVisible, setIsVisible] = useState(false);
     const list = [
@@ -40,8 +33,23 @@ export function HelpPage() {
             onPress: () => setIsVisible(false),
         },
     ];
-
-    let textLog = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt varius varius.";
+    const helpList= [
+        {
+            topic: 'Minha Conta',
+            question: 'Como faço para personalizar o meu feed?',
+            answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt varius varius.',
+        },
+        {
+            topic: 'Minha Conta',
+            question: 'Como posso modificar o meu email?',
+            answer: 'Morbi urna dolor, fermentum maximus nibh non, malesuada tempor purus. Praesent tincidunt blandit dui.',
+        },
+        {
+            topic: 'Minha Conta',
+            question: 'Como faço para trocar a foto de perfil',
+            answer: 'Fusce nibh massa, pulvinar sit amet nisl non, sagittis tempor urna. Aenean in sem tellus.',
+        }
+    ]
     return (
         <>
             <Container>
@@ -53,46 +61,36 @@ export function HelpPage() {
             </Container>
             <SubContainer>
                 <SelectWrapper>
-                <Button
-                    title="Categorias"
-                    onPress={() => setIsVisible(true)}
+                    <Button
+                        title="Categorias"
+                        onPress={() => setIsVisible(true)}
 
-                />
-                <BottomSheet modalProps={{}} isVisible={isVisible}>
-                    {list.map((l, i) => (
-                        <ListItem
-                            key={i}
-                            containerStyle={l.containerStyle}
-                            onPress={l.onPress}
-                        >
-                            <ListItem.Content>
-                                <ListItem.Title style={l.titleStyle}>{l.title}</ListItem.Title>
-                            </ListItem.Content>
-                        </ListItem>
-                    ))}
-                </BottomSheet>
-                        <SelectText>{topic}</SelectText>
+                    />
+                    <BottomSheet modalProps={{}} isVisible={isVisible}>
+                        {list.map((l, i) => (
+                            <ListItem
+                                key={i}
+                                containerStyle={l.containerStyle}
+                                onPress={l.onPress}
+                            >
+                                <ListItem.Content>
+                                    <ListItem.Title style={l.titleStyle}>{l.title}</ListItem.Title>
+                                </ListItem.Content>
+                            </ListItem>
+                        ))}
+                    </BottomSheet>
+                    <SelectText>{topic}</SelectText>
                 </SelectWrapper>
-                
-                <Pressable
-                    onPress={() => {
-                        pressableActive ? setPressableActive(false) : setPressableActive(true)
-                    }}>
-                    <ResultInfo>
-                        <ResultTopicWrapper>
-                            <ResultTopic>Minha conta</ResultTopic>
-                        </ResultTopicWrapper>
 
-                        <ResultTitle>Como faço para personalizar o meu feed?</ResultTitle>
-
-                        {pressableActive && (
-                            <ResultContentWrapper>
-                                <ResultContent testID="pressable_press_console">{textLog}</ResultContent>
-                            </ResultContentWrapper>
-                        )}
-
-                    </ResultInfo>
-                </Pressable>
+                {helpList.map((data)=>(
+                    <>
+                    <PressableHelp
+                     textTopic={data.topic}
+                     textAnswer={data.answer}
+                     textQuestion={data.question}/>
+                    </>
+                )
+                )}
             </SubContainer>
 
         </>
