@@ -3,6 +3,7 @@ export default {
     background: "#FDFFF4",
     white: "#FFFFFF",
     black: "#000000",
+    blue_100: '#E5EBFF',
     blue_300: "#82C3FF",
     blue_500: "#45A6FF",
     blue_950: "#10162F",
