@@ -13,7 +13,7 @@ import {
   AnswerButton,
   AnswerButtonText,
   IconPlus,
-} from "./styles";
+} from './styles';
 
 export function QuestionPage() {
   return (
@@ -23,7 +23,7 @@ export function QuestionPage() {
           <AvatarWrapper>
             <Avatar
               source={{
-                uri: "https://avatars.githubusercontent.com/u/70654718?v=4",
+                uri: 'https://avatars.githubusercontent.com/u/70654718?v=4',
               }}
             />
           </AvatarWrapper>

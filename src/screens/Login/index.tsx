@@ -1,19 +1,16 @@
-import { Input } from "../../components/Input";
+import { Input } from '../../components/Input';
 import {
   Container,
   LogoImage,
   LoginForm,
   Label,
   LogoImageContainer,
-  SignInButton,
-  SignInButtonText,
-  SignUpButton,
-  SignUpButtonText,
   ForgetText,
   ForgetBox,
   LabelContainer,
-} from "./styles";
-import logoQuestty from "../../assets/questty-logo-large.png";
+} from './styles';
+import logoQuestty from '../../assets/questty-logo-large.png';
+import { Button } from '../../components/Button';
 
 export function Login() {
   return (
@@ -31,12 +28,8 @@ export function Login() {
           <ForgetBox>
             <ForgetText>Esqueci a minha senha</ForgetText>
           </ForgetBox>
-          <SignInButton>
-            <SignInButtonText>Entrar</SignInButtonText>
-          </SignInButton>
-          <SignUpButton>
-            <SignUpButtonText>Cadastrar</SignUpButtonText>
-          </SignUpButton>
+          <Button content="Cadastrar" backgroundColor="blue_500" />
+          <Button content="Entrar" backgroundColor="yellow_500" />
         </LoginForm>
       </Container>
     </>
