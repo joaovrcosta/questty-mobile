@@ -21,11 +21,15 @@ export function HeaderComponent() {
     Navigation.navigate("Profile")
   }
 
+  const handleLogoPress = () => {
+    Navigation.navigate("Dashboard")
+  }
+
   return (
     <>
       <HeaderBox>
         <HeaderWrapper>
-          <ImageBox>
+          <ImageBox onPress={handleLogoPress}>
             <QuesttyLogo source={Logo} />
           </ImageBox>
           <InputBox>
