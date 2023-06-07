@@ -10,9 +10,22 @@ import {
   LabelContainer,
 } from './styles';
 import logoQuestty from '../../assets/questty-logo-large.png';
-import { Button } from '../../components/Button';
+//import { Button } from '../../components/Button';
+import { Button } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+
+
 
 export function Login() {
+  const navigation = useNavigation<any>();
+
+  const handleRegisterPress = () => {
+    console.log("Navigation funciona, não esqueça de me apagar por favor")
+    navigation.navigate('Register');
+  }
+
+  // <Button content="Cadastrar" backgroundColor="blue_500" onPress={handleRegisterPress} />
+ // <Button content="Entrar" backgroundColor="yellow_500" />
   return (
     <>
       <Container>
@@ -28,8 +41,8 @@ export function Login() {
           <ForgetBox>
             <ForgetText>Esqueci a minha senha</ForgetText>
           </ForgetBox>
-          <Button content="Cadastrar" backgroundColor="blue_500" />
-          <Button content="Entrar" backgroundColor="yellow_500" />
+        <Button title='test' onPress={handleRegisterPress}/>
+         
         </LoginForm>
       </Container>
     </>

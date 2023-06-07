@@ -1,7 +1,7 @@
 import { ThemeProvider } from 'styled-components';
 import theme from './src/global/styles/theme';
 // import QuesttyLogo from "./src/assets/questty-logo-for-mobile.svg";
-import { Dashboard } from './src/screens/Feed';
+
 //Navigation 
 import { NavigationContainer } from '@react-navigation/native'
 import Navigation from './src/components/Navigation/Navigation'
@@ -14,7 +14,7 @@ import {
 } from '@expo-google-fonts/poppins';
 import { HeaderComponent } from './src/components/Header';
 
-import { Profile } from './src/screens/Profile';
+
 
 export default function App() {
   const [hasLoadedFonts] = useFonts({
@@ -35,7 +35,6 @@ export default function App() {
       <NavigationContainer>
         <Navigation />
       </NavigationContainer>
-      <Profile />
     </ThemeProvider>
   );
 }
