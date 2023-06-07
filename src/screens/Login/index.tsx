@@ -16,11 +16,10 @@ import { useNavigation } from '@react-navigation/native';
 
 
 export function Login() {
-  const navigation = useNavigation<any>();
+  const Navigation = useNavigation<any>();
 
   const handleRegisterPress = () => {
-    console.log("ligma")
-    navigation.navigate('Register');
+    Navigation.navigate('Register');
   }
 
   return (

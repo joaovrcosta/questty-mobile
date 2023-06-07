@@ -23,7 +23,7 @@ export const HeaderWrapper = styled.View`
   align-items: center;
 `;
 
-export const AvatarContainer = styled.View`
+export const AvatarContainer = styled.TouchableOpacity`
   display: flex;
   justify-content: center;
   align-items: center;

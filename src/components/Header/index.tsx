@@ -12,8 +12,15 @@ import {
 } from './styles';
 
 import Logo from '../../assets/questty-logo.png';
+import { useNavigation } from '@react-navigation/native'
 
 export function HeaderComponent() {
+  const Navigation = useNavigation<any>()
+
+  const handleAvatarPress = () => {
+    Navigation.navigate("Profile")
+  }
+
   return (
     <>
       <HeaderBox>
@@ -26,7 +33,7 @@ export function HeaderComponent() {
           </InputBox>
           <UserBox>
             <IconBell name="bell" />
-            <AvatarContainer>
+            <AvatarContainer onPress={handleAvatarPress}>
               <Avatar
                 source={{
                   uri: 'https://avatars.githubusercontent.com/u/70654718?v=4',

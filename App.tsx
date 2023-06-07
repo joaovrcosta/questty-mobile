@@ -31,8 +31,9 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      {!isRegisterPage && <HeaderComponent />}
+
       <NavigationContainer>
+        {!isRegisterPage && <HeaderComponent />}
         <Navigation />
       </NavigationContainer>
     </ThemeProvider>
