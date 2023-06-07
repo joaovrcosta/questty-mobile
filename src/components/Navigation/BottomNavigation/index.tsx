@@ -7,9 +7,9 @@ import { Dashboard } from '../../../screens/Feed';
 
 const Tab = createBottomTabNavigator();
 
-function Navigation() {
+function BottomNavigation() {
     return (
-        <Tab.Navigator initialRouteName='Login' screenOptions={{ headerShown: false }}>
+        <Tab.Navigator initialRouteName='Dashboard'>
             <Tab.Screen name="Quest" component={QuestionCreationPage} />
             <Tab.Screen name="Profile" component={Profile} />
             <Tab.Screen name="Dashboard" component={Dashboard} />
@@ -18,4 +18,4 @@ function Navigation() {
     )
 }
 
-export default Navigation;
+export default BottomNavigation;
