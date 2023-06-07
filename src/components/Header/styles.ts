@@ -23,7 +23,7 @@ export const HeaderWrapper = styled.View`
   align-items: center;
 `;
 
-export const AvatarContainer = styled.View`
+export const AvatarContainer = styled.TouchableOpacity`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,7 +61,7 @@ export const QuesttyLogo = styled.Image`
   height: ${RFValue(24)}px;
 `;
 
-export const ImageBox = styled.View`
+export const ImageBox = styled.TouchableOpacity`
   display: flex;
   justify-content: center;
   align-items: center;

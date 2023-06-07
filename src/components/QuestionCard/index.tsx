@@ -1,5 +1,5 @@
 import React from "react";
-
+import {useNavigation} from '@react-navigation/native'
 import {
   Container,
   UserInfo,
@@ -24,9 +24,17 @@ interface QuestionCardProps {
 }
 
 export function QuestionCard({ data }: QuestionCardProps) {
+
+  const Navigation = useNavigation<any>()
+
+  function handleQuestionPress(){
+    Navigation.navigate("Question Page")
+  }
+
+
   return (
     <>
-      <Container>
+      <Container onPress={handleQuestionPress}>
         <QuestionHeader>
           <UserInfo>
             <AvatarContainer>

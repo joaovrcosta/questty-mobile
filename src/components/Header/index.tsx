@@ -12,13 +12,24 @@ import {
 } from './styles';
 
 import Logo from '../../assets/questty-logo.png';
+import { useNavigation } from '@react-navigation/native'
 
 export function HeaderComponent() {
+  const Navigation = useNavigation<any>()
+
+  const handleAvatarPress = () => {
+    Navigation.navigate("Profile")
+  }
+
+  const handleLogoPress = () => {
+    Navigation.navigate("Dashboard")
+  }
+
   return (
     <>
       <HeaderBox>
         <HeaderWrapper>
-          <ImageBox>
+          <ImageBox onPress={handleLogoPress}>
             <QuesttyLogo source={Logo} />
           </ImageBox>
           <InputBox>
@@ -26,7 +37,7 @@ export function HeaderComponent() {
           </InputBox>
           <UserBox>
             <IconBell name="bell" />
-            <AvatarContainer>
+            <AvatarContainer onPress={handleAvatarPress}>
               <Avatar
                 source={{
                   uri: 'https://avatars.githubusercontent.com/u/70654718?v=4',
