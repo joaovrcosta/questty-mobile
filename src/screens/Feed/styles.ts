@@ -1,80 +1,5 @@
-import styled from "styled-components/native";
-
-import { getStatusBarHeight } from "react-native-iphone-x-helper";
-import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
-import { EvilIcons } from "@expo/vector-icons";
-
-export const Header = styled.View`
-  width: 100%;
-  height: ${RFPercentage(16)}px;
-  background-color: ${({ theme }) => theme.colors.background};
-
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: row;
-`;
-
-export const HeaderWrapper = styled.View`
-  width: 100%;
-  padding: 0px 16px;
-  margin-top: ${getStatusBarHeight() + RFValue(20)};
-
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-export const AvatarContainer = styled.View`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: ${({ theme }) => theme.colors.black};
-  border-radius: 50px;
-  width: ${RFValue(50)}px;
-  height: ${RFValue(50)}px;
-  margin-left: 16px;
-`;
-
-export const Avatar = styled.Image`
-  width: ${RFValue(48)}px;
-  height: ${RFValue(48)}px;
-  border-radius: 50px;
-`;
-
-export const TextTest = styled.Text`
-  color: ${({ theme }) => theme.colors.blue_950};
-`;
-
-export const UserBox = styled.View`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-`;
-
-export const IconBell = styled(EvilIcons)`
-  color: ${({ theme }) => theme.colors.blue_950};
-  font-size: ${RFValue(28)}px;
-`;
-
-export const QuesttyLogo = styled.Image`
-  width: ${RFValue(72)}px;
-  height: ${RFValue(24)}px;
-`;
-
-export const ImageBox = styled.View`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-`;
-
-export const InputBox = styled.View`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-`;
+import styled from 'styled-components/native';
+import { RFValue } from 'react-native-responsive-fontsize';
 
 export const Container = styled.View`
   flex: 1;
@@ -87,3 +12,22 @@ export const Questions = styled.View`
 `;
 
 export const QuestionsList = styled.FlatList``;
+
+export const ReloadNewQuestions = styled.View`
+  background-color: ${({ theme }) => theme.colors.blue_300};
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid ${({ theme }) => theme.colors.black};
+`;
+
+export const InnerText = styled.Text`
+  font-size: ${RFValue(28)}px;
+`;
+
+export const ReloadContainer = styled.View`
+  padding: 0 16px;
+`;

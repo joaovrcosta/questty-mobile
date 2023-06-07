@@ -9,9 +9,9 @@ import {
   QuesttyLogo,
   ImageBox,
   InputBox,
-} from "./styles";
+} from './styles';
 
-import Logo from "../../assets/questty-logo.png";
+import Logo from '../../assets/questty-logo.png';
 
 export function HeaderComponent() {
   return (
@@ -29,7 +29,7 @@ export function HeaderComponent() {
             <AvatarContainer>
               <Avatar
                 source={{
-                  uri: "https://avatars.githubusercontent.com/u/70654718?v=4",
+                  uri: 'https://avatars.githubusercontent.com/u/70654718?v=4',
                 }}
               />
             </AvatarContainer>

@@ -1,12 +1,10 @@
+import { getBottomSpace } from 'react-native-iphone-x-helper';
+import { Avatar } from '../../components/Avatar';
+import { QuestionCard } from '../../components/QuestionCard';
 import * as S from './styles';
 import { Text } from 'react-native';
 
-import { getBottomSpace } from 'react-native-iphone-x-helper';
-
-import { QuestionCard } from '../../components/QuestionCard';
-import { SelectCategory } from '../../components/SelectCategory';
-
-export function Dashboard() {
+export function Profile() {
   const data = [
     {
       category: 'biologia',
@@ -35,16 +33,12 @@ export function Dashboard() {
   ];
 
   return (
-    <>
-      <S.Container>
-        <SelectCategory name="Matérias"></SelectCategory>
-
-        <S.ReloadContainer>
-          <S.ReloadNewQuestions>
-            <Text>+ 6 perguntas</Text>
-          </S.ReloadNewQuestions>
-        </S.ReloadContainer>
-
+    <S.ProfileContainer>
+      <Avatar />
+      <S.Username>joaovrcosta</S.Username>
+      <S.LoginDate>Entrou em 10 de fevereiro de 2021</S.LoginDate>
+      <S.QuestionsContainer>
+        <S.Title>Ultimas respostas:</S.Title>
         <S.Questions>
           <S.QuestionsList
             data={data}
@@ -55,7 +49,7 @@ export function Dashboard() {
             }}
           />
         </S.Questions>
-      </S.Container>
-    </>
+      </S.QuestionsContainer>
+    </S.ProfileContainer>
   );
 }

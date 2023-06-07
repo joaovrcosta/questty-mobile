@@ -17,6 +17,7 @@ export const SignInButton = styled.TouchableOpacity<IButton>`
   border: 1px solid ${({ theme }) => theme.colors.black};
   margin-bottom: 8px;
   margin-top: 16px;
+  width: 100%;
 `;
 
 export const SignInButtonText = styled.Text`

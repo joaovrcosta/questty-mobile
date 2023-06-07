@@ -20,6 +20,8 @@ export function Register() {
             Política de Privacidade do Questty .
           </S.TermsInfo>
         </S.TermsInfoContainer>
+        <Button content="Cadastrar" backgroundColor="blue_500" />
+        <Button content="Entrar" backgroundColor="yellow_500" />
       </S.SignUpForm>
     </S.Container>
   );

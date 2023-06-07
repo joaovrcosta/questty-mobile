@@ -1,6 +1,6 @@
-import styled from "styled-components/native";
-import { Octicons } from "@expo/vector-icons";
-import { RFValue } from "react-native-responsive-fontsize";
+import styled from 'styled-components/native';
+import { Octicons } from '@expo/vector-icons';
+import { RFValue } from 'react-native-responsive-fontsize';
 
 export const Container = styled.View`
   padding: 0px 16px;
