@@ -9,7 +9,7 @@ const Tab = createBottomTabNavigator();
 
 function BottomNavigation() {
     return (
-        <Tab.Navigator initialRouteName='Dashboard'>
+        <Tab.Navigator initialRouteName='Dashboard' screenOptions={{ headerShown: false }}>
             <Tab.Screen name="Quest" component={QuestionCreationPage} />
             <Tab.Screen name="Profile" component={Profile} />
             <Tab.Screen name="Dashboard" component={Dashboard} />
