@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+import BottomNavigation from './BottomNavigation'
 import { QuestionPage } from '../../screens/QuestionPage';
 import { Login } from '../../screens/Login';
 import { Register } from '../../screens/Register';
@@ -17,8 +18,8 @@ function Navigation() {
             <Stack.Screen name="Register" component={Register} />
             <Stack.Screen name="Question Page" component={QuestionPage} />
             <Stack.Screen name="HelpPage" component={HelpPage} />
-            <Stack.Screen name="Profile" component={Profile}/>
-            <Stack.Screen name="Dashboard" component={Dashboard}/>
+            <Stack.Screen name="Profile" component={BottomNavigation}/>
+            <Stack.Screen name="Dashboard" component={BottomNavigation}/>
         </Stack.Navigator>
 
     )

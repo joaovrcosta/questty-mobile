@@ -13,6 +13,7 @@ import {
   Poppins_700Bold,
 } from '@expo-google-fonts/poppins';
 import { HeaderComponent } from './src/components/Header';
+import BottomNavigation from './src/components/Navigation/BottomNavigation';
 
 
 
