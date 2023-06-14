@@ -5,6 +5,7 @@ interface ButtonProps {
   content: string;
   backgroundColor: S.borderVariants;
   onPress?: (event: GestureResponderEvent) => void;
+  value?: string;
 }
 
 export function Button({ content, backgroundColor, onPress }: ButtonProps) {

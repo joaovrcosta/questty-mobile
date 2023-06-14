@@ -1,7 +1,7 @@
-import { getStatusBarHeight } from "react-native-iphone-x-helper";
-import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
-import styled from "styled-components/native";
-import { EvilIcons } from "@expo/vector-icons";
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
+import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
+import styled from 'styled-components/native';
+import { EvilIcons } from '@expo/vector-icons';
 
 export const HeaderBox = styled.View`
   width: 100%;
@@ -49,6 +49,7 @@ export const UserBox = styled.View`
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  top: -10px;
 `;
 
 export const IconBell = styled(EvilIcons)`

@@ -12,18 +12,19 @@ import {
 } from './styles';
 
 import Logo from '../../assets/questty-logo.png';
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native';
+import { HeaderInput } from './HeaderInput';
 
 export function HeaderComponent() {
-  const Navigation = useNavigation<any>()
+  const Navigation = useNavigation<any>();
 
   const handleAvatarPress = () => {
-    Navigation.navigate("Profile")
-  }
+    Navigation.navigate('Profile');
+  };
 
   const handleLogoPress = () => {
-    Navigation.navigate("Dashboard")
-  }
+    Navigation.navigate('Dashboard');
+  };
 
   return (
     <>
@@ -33,7 +34,7 @@ export function HeaderComponent() {
             <QuesttyLogo source={Logo} />
           </ImageBox>
           <InputBox>
-            <TextTest>SearchInput</TextTest>
+            <HeaderInput />
           </InputBox>
           <UserBox>
             <IconBell name="bell" />

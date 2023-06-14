@@ -36,7 +36,7 @@ export function Profile() {
     <S.ProfileContainer>
       <Avatar />
       <S.Username>joaovrcosta</S.Username>
-      <S.LoginDate>Entrou em 10 de fevereiro de 2021</S.LoginDate>
+      <S.LoginDate>Entrou em 14 de Junho de 2023</S.LoginDate>
       <S.QuestionsContainer>
         <S.Title>Ultimas respostas:</S.Title>
         <S.Questions>

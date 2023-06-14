@@ -2,9 +2,9 @@ import { ThemeProvider } from 'styled-components';
 import theme from './src/global/styles/theme';
 // import QuesttyLogo from "./src/assets/questty-logo-for-mobile.svg";
 
-//Navigation 
-import { NavigationContainer } from '@react-navigation/native'
-import Navigation from './src/components/Navigation/Navigation'
+//Navigation
+import { NavigationContainer } from '@react-navigation/native';
+import Navigation from './src/components/Navigation/Navigation';
 
 import {
   useFonts,
@@ -14,8 +14,6 @@ import {
 } from '@expo-google-fonts/poppins';
 import { HeaderComponent } from './src/components/Header';
 import BottomNavigation from './src/components/Navigation/BottomNavigation';
-
-
 
 export default function App() {
   const [hasLoadedFonts] = useFonts({
@@ -33,7 +31,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <NavigationContainer>
-        {!isRegisterPage && <HeaderComponent />}
+        <HeaderComponent />
         <Navigation />
       </NavigationContainer>
     </ThemeProvider>
